@@ -1,2 +1,2 @@
 # Data-Science-Workspace
-IBM Data Science to learn hands on
+IBM Data Science covering the objectives and tools using jupyter 

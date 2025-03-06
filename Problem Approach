@@ -1,0 +1,92 @@
+Business Understanding Stage
+Topic: Hospitals
+
+Problem Description: Hospitals are facing a challenge in managing emergency room (ER) wait times, which is a growing concern for both patients and healthcare providers. Long wait times can lead to patient dissatisfaction, poorer outcomes, and an increased likelihood of patients leaving the ER without receiving care (known as "left without being seen" or LWBS). The hospital needs to identify factors contributing to longer wait times and develop strategies to optimize patient flow in the ER.
+
+Problem Question:
+
+"What factors contribute to long wait times in the emergency room, and how can we predict and reduce these wait times to improve patient satisfaction and outcomes?"
+
+This question will guide the use of data to understand patterns in ER wait times, such as patient volume, time of day, staffing levels, and types of medical cases, and help develop predictive models or strategies to optimize the ER process.
+
+
+ChatGPT said:
+
+1. Analytic Approach
+For this problem, I would use an exploratory analysis to first identify the key factors affecting ER wait times. Then, I would employ predictive modeling to forecast ER wait times based on historical data. A regression model or time series analysis might be used to predict wait times based on factors such as patient arrival times, types of cases, staffing levels, and other hospital conditions. The approach would also involve clustering to group similar patient scenarios, which could help optimize resource allocation.
+
+2. Data Requirements
+To answer the question effectively, the data required would include:
+
+Patient arrival data: Timestamp of when patients arrive at the ER.
+Patient demographics: Age, gender, and primary complaint to understand case complexity.
+Wait times: Time spent by patients waiting before being seen by a healthcare provider.
+ER staffing data: Number of doctors, nurses, and other staff members available during different shifts.
+Hospital capacity: ER capacity during specific hours of the day or night, including the number of available beds.
+Time of day and day of the week: ER visit patterns to understand peak hours or seasonal effects.
+Case severity: Information on the type of case, such as whether the patient is having a minor issue or a life-threatening condition.
+3. Data Collection
+Data would be collected from multiple sources within the hospital:
+
+Electronic Health Records (EHR): To obtain patient demographics, case severity, and timestamps of when patients arrive and when they are seen by a healthcare provider.
+Hospital management systems: For staffing levels and hospital capacity data.
+Manual logs or operational systems: To track wait times and patient flow, including those who leave the ER without being seen.
+Sensors or monitoring tools: If available, to track patient movement or activity within the ER (e.g., sensors tracking time spent in waiting areas).
+The hospital's data collection infrastructure needs to be integrated to ensure that all relevant data points are accurately captured and updated in real-time or near real-time.
+
+4. Data Understanding and Preparation
+Exploratory Data Analysis (EDA): The first step is to visualize and understand the distribution of wait times, patient demographics, staffing patterns, and case types. We would also check for missing or incomplete data and perform an initial assessment to ensure data quality.
+
+Data Cleaning: Any missing values would need to be handled by imputation or removal. Outliers or erroneous data (e.g., patients with unusually long or short wait times) would be identified and corrected or removed.
+
+Feature Engineering: New features might be created based on the existing data, such as time-of-day categorization (e.g., early morning, evening), or combining staffing levels with patient arrival patterns to create new predictors.
+
+Normalization/Transformation: Data scaling and normalization may be required for variables such as wait times or staffing levels, especially for machine learning models that are sensitive to scale.
+
+5. Modeling and Evaluation
+Modeling: Various machine learning models can be trained to predict wait times, including:
+
+Linear regression: To model the relationship between wait times and features like patient arrival times, staffing, and case severity.
+Random forests or gradient boosting: For more complex interactions between features and better predictive performance.
+Time series forecasting: If the data shows temporal patterns, time series methods like ARIMA could be used to forecast wait times based on historical trends.
+Evaluation: The models would be evaluated using metrics like:
+
+Mean Absolute Error (MAE) or Root Mean Squared Error (RMSE) for regression models to assess how close the predicted wait times are to actual wait times.
+R-squared: To evaluate how well the model explains the variance in wait times.
+Cross-validation: To ensure that the model generalizes well to unseen data.
+Additionally, model interpretability is important—ensuring the hospital staff can understand and act on the model’s output (e.g., by explaining which factors contribute most to wait times).
+
+Finally, the best-performing model will be deployed in a real-time environment to make predictions, and the system will be continuously monitored and retrained with new data as it becomes available.
+
+
+==============================================================================================================================================================================================================================================================================================================================================================================
+
+After completing this course, you learned many facts about data science methodology. Here are 14 key, high-level takeaway facts you’ll want to remember from this course.
+
+Foundational methodology, a cyclical, iterative data science methodology developed by John Rollins, consists of 10 stages, starting with Business Understanding and ending with Feedback.
+
+CRISP-DM, an open source data methodology, combines several data-related methodology stages into one stage and omits the Feedback stage resulting in a six-stage data methodology.
+
+The primary goal of the Business Understanding stage is to understand the business problem and determine the data needed to answer the core business question. 
+
+During the Analytic Approach stage, you can choose from descriptive diagnostic, predictive, and prescriptive analytic approaches and whether to use machine learning techniques.
+
+During the Data Requirements stage, scientists identify the correct and necessary data content, formats, and sources needed for the specific analytical approach.
+
+During the Data Collection stage, expert data scientists revise data requirements and make critical decisions regarding the quantity and quality of data. Data scientists apply descriptive statistics and visualization techniques to thoroughly assess the content, quality, and initial insights gained from the collected data, identify gaps, and determine if new data is needed, or if they should substitute existing data.
+
+The Data Understanding stage encompasses all activities related to constructing the data set. This stage answers the question of whether the collected data represents the data needed to solve the business problem. Data scientists might use descriptive statistics, predictive statistics, or both.
+
+Data scientists commonly apply Hurst, univariates, and statistics such as mean, median, minimum, maximum, standard deviation, pairwise correlation, and histograms. 
+
+During the Data Preparation stage, data scientists must address missing or invalid values, remove duplicates, and validate that the data is properly formatted. Feature engineering and text analysis are key techniques data scientists apply to validate and analyze data during the Data Preparation stage.
+
+The end goal of the Modeling stage is that the data model answers the business question. During the Modeling stage, data scientists use a training data set. Data scientists test multiple algorithms on the training set data to determine whether the variables are required and whether the data supports answering the business question. The outcome of those models is either descriptive or predictive. 
+
+The Evaluation stage consists of two phases, the diagnostic measures phase, and the statistical significance phase. Data scientists and others assess the quality of the model and determine if the model answers the initial Business Understanding question or if the data model needs adjustment. 
+
+During the Deployment stage, data scientists release the data model to a targeted group of stakeholders, including solution owners, marketing staff, application developers, and IT administration., 
+
+During the Feedback stage, stakeholders and users evaluate the model and contribute feedback to assess the model’s performance. 
+
+The data model’s value depends on its ability to iterate; that is, how successfully the data model incorporates user feedback.
